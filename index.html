@@ -1,0 +1,33 @@
+<html>
+<head>
+<title> CC by Pranav </title>
+<style>
+	* { font-size:50px;}
+	body {background-color:azure;}
+</style>
+<link rel="icon" herf="rs.png" >
+</head>
+<body>
+<center>
+<h1> CC by Pranav </h1>
+<form>
+	<label> &#8377 </label>
+	<input type="number" step="any" id="air" placeholder="enter amt in RS" + />
+	<br><br>
+	<label> &#36 </label>
+	<input type="number" step="any" id="aid" placeholder="enter amt in $$" + />
+</form>
+<script>
+	let air =document.getElementById("air");
+	let aid =document.getElementById("aid");
+	
+	
+	air.addEventListener("input",function(){
+	let rs = parseFloat(air.value);
+	let ds = rs / 83.15;
+	aid.value= ds.toFixed(2);
+	});
+</script>
+</center>
+</body>
+</html>
